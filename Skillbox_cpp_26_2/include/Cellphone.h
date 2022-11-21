@@ -43,9 +43,13 @@ class Cellphone{
         std::cout<< "CALL "<<contact->getNumber() << std::endl;
     }
     void sms(){
+        std::string smsText;
         std::cout << "Input name or number:";
         Contact* contact = findNumber();
-        std::cout<< "SMS "<<contact->getNumber() << std::endl;
+        std::cout<<"Input Text:";
+        std::cin>> smsText;
+        std::cout<< "SMS to "<<contact->getNumber() <<std::endl
+                    <<"Text:"<< smsText<< std::endl;
     }
 
     CMD inputCommand(){
